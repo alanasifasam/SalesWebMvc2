@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\NovaPasta1\**" />
+    <Compile Remove="Models\NovaPasta2\**" />
+    <Content Remove="Models\NovaPasta1\**" />
+    <Content Remove="Models\NovaPasta2\**" />
+    <EmbeddedResource Remove="Models\NovaPasta1\**" />
+    <EmbeddedResource Remove="Models\NovaPasta2\**" />
+    <None Remove="Models\NovaPasta1\**" />
+    <None Remove="Models\NovaPasta2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="2.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />

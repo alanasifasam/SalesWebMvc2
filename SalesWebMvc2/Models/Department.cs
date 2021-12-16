@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+using System;
+using System.Linq;
+
 namespace SalesWebMvc2.Models
 {
     public class Department
@@ -17,5 +20,16 @@ namespace SalesWebMvc2.Models
             Id = id;
             Name = name;
         }
+
+        public void AddSeller(Seller seller)
+        {
+            Sellers.Add(seller);
+        }
+
+        public double TotalSales(DateTime initial, DateTime final)
+        {
+            return Sellers.Sum(seller => seller.TotalSales(initial, final));
+        }
+
     }
 }

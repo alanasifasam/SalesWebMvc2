@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SalesWebMvc2.Data;
 
 namespace SalesWebMvc2.Migrations
 {
     [DbContext(typeof(SalesWebMvc2Context))]
-    partial class SalesWebMvc2ContextModelSnapshot : ModelSnapshot
+    [Migration("20211220160515_DepartmentForeignkey")]
+    partial class DepartmentForeignkey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
